@@ -9,7 +9,7 @@ function Login3() {
 
   const handleButtonClick = (isOld) => {
     // Navigate to Login4 with gender, weight, and isOld
-    navigate("/login3", { state: { gender, weight, isOld } });
+    navigate("/login4", { state: { gender, weight, isOld } });
   };
 
   console.log(gender);

@@ -1,0 +1,42 @@
+.logo_container {
+  background: var(--MainColor, #32dee7);
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+
+  .logo {
+    width: 100%;
+    height: 42px;
+    margin-top: 200px;
+    color: var(--ThirdColor, #e9feff);
+    font-family: Pretendard;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .logo_background {
+    width: 100%;
+    margin-top: 400px;
+    position: relative;
+
+    .skyblue {
+      position: absolute; /* Position skyblue image */
+      z-index: 1; /* Lower z-index */
+      top: 0; /* Align the images */
+      left: 0;
+    }
+
+    .white {
+      position: absolute; /* Position white image */
+      z-index: 10; /* Higher z-index to place on top */
+      top: 0; /* Align the images */
+      left: 0;
+    }
+  }
+}

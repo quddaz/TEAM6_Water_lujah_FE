@@ -6,6 +6,7 @@ import Layout from "../layout/Layout";
 import mypageRouter from "./mypageRouter";
 import communityRouter from "./communityRouter";
 
+const Logo = lazy(() => import("../layout/LogoPage"));
 const Main = lazy(() => import("../page/main"));
 const Login1 = lazy(() => import("../page/login/Login1"));
 const Login2 = lazy(() => import("../page/login/Login2"));
@@ -25,6 +26,14 @@ const router = createBrowserRouter([
       ...communityRouter,
 
       {
+        path: "/",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Logo />
+          </Suspense>
+        ),
+      },
+      {
         path: "/main",
         element: (
           <Suspense fallback={<Loading />}>
@@ -33,7 +42,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "",
+        path: "login1",
         element: (
           <Suspense fallback={<Loading />}>
             <Login1 />
@@ -41,7 +50,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "login1",
+        path: "login2",
         element: (
           <Suspense fallback={<Loading />}>
             <Login2 />
@@ -49,7 +58,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "login2",
+        path: "login3",
         element: (
           <Suspense fallback={<Loading />}>
             <Login3 />
@@ -57,7 +66,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "login3",
+        path: "login4",
         element: (
           <Suspense fallback={<Loading />}>
             <Login4 />
