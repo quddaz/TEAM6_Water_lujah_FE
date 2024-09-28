@@ -30,6 +30,7 @@
 }
 
 @mixin stc_vertical($h, $t, $c: #32dee7) {
+  //   margin-left: 3px;
   width: 14.861px;
   height: $h;
   flex-shrink: 0;
