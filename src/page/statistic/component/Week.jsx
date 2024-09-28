@@ -75,25 +75,25 @@ const Week = () => {
 
           <div className="stc-main-show-graphs">
             <div className="stc-main-show-graph-time">
-              <div className="verticall"></div>월
+              <div className="cverticall"></div>월
             </div>
             <div className="stc-main-show-graph-time">
-              <div className="vertical"></div>화
+              <div className="cvertical"></div>화
             </div>
             <div className="stc-main-show-graph-time">
-              <div className="verticall"></div>수
+              <div className="cverticall"></div>수
             </div>
             <div className="stc-main-show-graph-time">
-              <div className="verticall"></div>묵
+              <div className="cverticall"></div>묵
             </div>
             <div className="stc-main-show-graph-time">
-              <div className="vertical"></div>금
+              <div className="cvertical"></div>금
             </div>
             <div className="stc-main-show-graph-time">
-              <div className="verticall"></div>토
+              <div className="cverticall"></div>토
             </div>
             <div className="stc-main-show-graph-time">
-              <div className="verticall"></div>일
+              <div className="cverticall"></div>일
             </div>
           </div>
         </div>

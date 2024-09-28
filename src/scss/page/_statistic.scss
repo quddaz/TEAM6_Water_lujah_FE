@@ -127,6 +127,26 @@
           background: var(--MainColor, #32dee7);
           z-index: 10px;
         }
+        .cverticall {
+          position: absolute;
+          bottom: calc(0px + 40px);
+          width: 14.861px;
+          height: 80px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #6a0000);
+          z-index: 10px;
+        }
+        .cvertical {
+          position: absolute;
+          bottom: calc(0px + 40px);
+          width: 14.861px;
+          height: 50px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #6a0000);
+          z-index: 10px;
+        }
       }
     }
     .stc-main-show-graph {
