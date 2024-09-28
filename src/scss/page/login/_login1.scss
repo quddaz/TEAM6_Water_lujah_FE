@@ -55,12 +55,13 @@
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #32dee7;
+        background-color: #32dee7; /* Change on hover */
       }
+    }
 
-      .gender_icon {
-        fill: #ffffff; // 아이콘을 흰색으로 변경
-      }
+    .selected {
+      background-color: #32dee7; /* Keep this color for the selected gender */
+      color: #ffffff; /* Optional: Change text color for selected state */
     }
   }
 

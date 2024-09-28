@@ -37,12 +37,16 @@
       align-self: stretch;
       border-radius: 8px;
       background: var(--NeutralColor, #d4eced);
+      transition: background-color 0.3s ease;
 
-      .weather_image {
-        display: flex;
-        align-items: center;
-        width: 80px;
-        height: 80px;
+      // Add styles for selected weather
+      &.selected {
+        background-color: #32dee7; /* Keep this color for the selected weather */
+        color: #ffffff; /* Optional: Change text color for selected state */
+      }
+
+      &:hover {
+        background-color: #32dee7; /* Change on hover */
       }
     }
   }

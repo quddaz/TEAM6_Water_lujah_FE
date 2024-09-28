@@ -5,14 +5,17 @@ import Progress from "../../assets/login/Progress1.svg";
 import { useNavigate } from "react-router-dom";
 
 function Login1() {
-  const [gender, setGender] = useState("");
+  const [gender, setGender] = useState(""); // To track selected gender
   const navigate = useNavigate(); // Initialize useNavigate
 
   const onMaleGenderClick = () => {
     setGender("MALE");
+    console.log("Selected Gender: MALE");
   };
+
   const onFemaleGenderClick = () => {
     setGender("FEMALE");
+    console.log("Selected Gender: FEMALE");
   };
 
   return (
@@ -25,14 +28,20 @@ function Login1() {
           </div>
         </div>
         <div className="login_gender">
-          <div className="gender" onClick={onMaleGenderClick}>
+          <div
+            className={`gender ${gender === "MALE" ? "selected" : ""}`} // Add selected class conditionally
+            onClick={onMaleGenderClick}
+          >
             <div className="login1_text1">남자</div>
             <MaleIcon
               className="gender_icon"
               style={{ width: "80px", height: "80px" }}
             />
           </div>
-          <div className="gender" onClick={onFemaleGenderClick}>
+          <div
+            className={`gender ${gender === "FEMALE" ? "selected" : ""}`} // Add selected class conditionally
+            onClick={onFemaleGenderClick}
+          >
             <div className="login1_text1">여자</div>
             <FemaleIcon
               className="gender_icon"
@@ -51,6 +60,7 @@ function Login1() {
           <div className="login1_next_button">
             <button
               className="next_button"
+              disabled={!gender}
               onClick={() => {
                 navigate("/login2", { state: { gender: gender } });
               }}
