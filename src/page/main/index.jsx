@@ -1,8 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Sun from "../../assets/main/Sun.svg";
 import Coffee from "../../assets/main/Coffee.svg";
 
-function index() {
+function Index() {
+  // 대문자로 시작하도록 변경
+  const [teaResult, setTeaResult] = useState(0);
+  const [spaResult, setSpaResult] = useState(0);
+  const [juiceResult, setjuiceResult] = useState(0);
+  const [milkResult, setMilkResult] = useState(0);
+  const [waterResult, setWaterResult] = useState(0);
+  const [coffeeResult, setCoffeeResult] = useState(0); // coffeeResult 상태 추가
+
+  useEffect(() => {
+    // WATER와 COFFEE의 값을 로컬 스토리지에서 불러오기
+    const water = localStorage.getItem("WATER") || "0";
+    const coffee = localStorage.getItem("COFFEE") || "0";
+    const tea = localStorage.getItem("TEA") || "0";
+    const spa = localStorage.getItem("SPARKLING_WATER") || "0";
+    const juice = localStorage.getItem("JUICE") || "0";
+    const milk = localStorage.getItem("MILK") || "0";
+
+    // 숫자로 변환 후 상태 저장
+    setWaterResult(parseFloat(water));
+    setCoffeeResult(parseFloat(coffee)); // coffeeResult 상태 업데이트
+    setTeaResult(parseFloat(tea));
+    setSpaResult(parseFloat(spa));
+    setjuiceResult(parseFloat(juice));
+    setMilkResult(parseFloat(milk));
+  }, []);
+
+  // totalWater 계산
+  const totalWater =
+    waterResult + teaResult + spaResult + juiceResult + milkResult;
+
   return (
     <>
       <div className="main_container">
@@ -20,7 +50,7 @@ function index() {
             />
             <div className="aquarium_text">
               <div className="aquarium_percent">30%</div>
-              <div className="aquarium_liter">0.3ML</div>
+              <div className="aquarium_liter">{totalWater}ML</div>
             </div>
           </div>
         </div>
@@ -67,4 +97,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index; // 대문자로 시작하도록 변경

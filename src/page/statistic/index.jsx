@@ -18,12 +18,6 @@ const Statistic = () => {
     setCaffeineIntake(coffee); // COFFEE 값을 상태로 저장
   }, []);
 
-  // const totalWater =
-  //   (parseFloat(water) || 0) +
-  //   (parseFloat(tea) || 0) +
-  //   (parseFloat(spa) || 0) +
-  //   (parseFloat(juice) || 0) +
-  //   (parseFloat(milk) || 0);
   return (
     <div className="stc-container">
       {/* <Header /> */}
