@@ -82,11 +82,12 @@ function Index() {
 
   const percentage = (totalWater / neededWater) * 100;
   let leadingDigit = Math.floor(percentage).toString();
+
+  // 0부터 10까지의 값을 처리
   if (parseInt(leadingDigit) > 10) {
-    leadingDigit = "10";
-  } else {
-    leadingDigit = leadingDigit[0]; // 첫 번째 자리수를 유지
+    leadingDigit = "10"; // 10 이상은 10으로 처리
   }
+
   const imageUrl = `https://quddaztestbucket.s3.ap-northeast-2.amazonaws.com/${leadingDigit}.png`;
 
   return (
