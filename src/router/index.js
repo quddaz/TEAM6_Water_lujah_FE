@@ -11,6 +11,7 @@ const Main = lazy(() => import("../page/main"));
 const Record = lazy(() => import("../page/record"));
 const Community = lazy(() => import("../page/community"));
 const Statistic = lazy(() => import("../page/statistic"));
+const DrinkRecord = lazy(() => import("../page/record/component/DrinkRecord"));
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <Statistic />
+          </Suspense>
+        ),
+      },
+      {
+        path: "drinkrecord",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <DrinkRecord />
           </Suspense>
         ),
       },

@@ -5,8 +5,11 @@ import { ReactComponent as SparkleUnion } from "../../assets/footer/SparkleUnion
 import { ReactComponent as TeaUnion } from "../../assets/footer/TeaUnion.svg";
 import { ReactComponent as JuiceUnion } from "../../assets/footer/JuiceUnion.svg";
 import { ReactComponent as MilkUnion } from "../../assets/footer/MilkUnion.svg";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Record = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   return (
     <>
       <div className="record_container">
@@ -20,28 +23,62 @@ const Record = () => {
         </div>
         <div className="record_category">
           <div className="record_category_item">
-            <ActiveUnion style={{ width: "33px", height: "44px" }} />물
+            <ActiveUnion
+              style={{ width: "33px", height: "44px" }}
+              onClick={() => {
+                navigate("/drinkrecord", { state: { drink: "WATER" } });
+              }}
+            />
+            물
           </div>
           <div className="record_category_item">
-            <CoffeeUnion style={{ width: "33px", height: "44px" }} />
+            <CoffeeUnion
+              style={{ width: "33px", height: "44px" }}
+              onClick={() => {
+                navigate("/drinkrecord", { state: { drink: "COFFEE" } });
+              }}
+            />
             커피
           </div>
           <div className="record_category_item">
-            <TeaUnion style={{ width: "33px", height: "44px" }} />차
+            <TeaUnion
+              style={{ width: "33px", height: "44px" }}
+              onClick={() => {
+                navigate("/drinkrecord", { state: { drink: "TEA" } });
+              }}
+            />
+            차
           </div>
         </div>
         <br />
         <div className="record_category">
           <div className="record_category_item">
-            <MilkUnion style={{ width: "33px", height: "44px" }} />
+            <MilkUnion
+              style={{ width: "33px", height: "44px" }}
+              onClick={() => {
+                navigate("/drinkrecord", { state: { drink: "MILK" } });
+              }}
+            />
             우유
           </div>
           <div className="record_category_item">
-            <SparkleUnion style={{ width: "33px", height: "44px" }} />
+            <SparkleUnion
+              style={{ width: "33px", height: "44px" }}
+              onClick={() => {
+                navigate("/drinkrecord", {
+                  state: { drink: "SPARKLING_WATER" },
+                });
+              }}
+            />
             탄산수
           </div>
           <div className="record_category_item">
-            <JuiceUnion style={{ width: "33px", height: "44px" }} />
+            <JuiceUnion
+              style={{ width: "33px", height: "44px" }}
+              onClick={() => {
+                navigate("/drinkrecord", { state: { drink: "JUICE" } });
+              }}
+            />
             주스
           </div>
         </div>

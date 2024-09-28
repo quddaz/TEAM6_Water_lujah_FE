@@ -1,4 +1,7 @@
 .drink-record-container {
+  display: flex; /* 부모 요소에 flex 적용 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  align-items: center; /* 자식 요소를 중앙 정렬 */
   .drink-record-header {
     display: flex;
     padding-left: 20px;
@@ -51,5 +54,18 @@
         border: 1px solid var(--NeutralColor, #d4eced);
       }
     }
+  }
+  .drink-record-footer {
+    margin-top: 80%;
+    display: flex; /* 여기도 flex로 설정 */
+    color: white;
+    width: 300px;
+    height: 48px;
+    padding: 10px;
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--gray-10, #3c3c3c);
   }
 }
