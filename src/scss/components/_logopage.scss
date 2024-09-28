@@ -6,7 +6,6 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  position: relative;
 
   .logo {
     width: 100%;
@@ -23,20 +22,19 @@
   .logo_background {
     width: 100%;
     margin-top: 400px;
-    position: relative;
-
-    .skyblue {
-      position: absolute; /* Position skyblue image */
-      z-index: 1; /* Lower z-index */
-      top: 0; /* Align the images */
-      left: 0;
+    .ship {
+      position: absolute;
+      top: 79%;
+      left: 65%;
     }
 
-    .white {
-      position: absolute; /* Position white image */
-      z-index: 10; /* Higher z-index to place on top */
-      top: 0; /* Align the images */
-      left: 0;
+    .back_skyblue {
+      position: absolute;
+      top: 90%;
+    }
+    .back_white {
+      position: absolute;
+      top: 94%;
     }
   }
 }
