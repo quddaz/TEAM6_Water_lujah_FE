@@ -81,7 +81,7 @@ function Index() {
   const currentWeatherData = weatherMapping[todayWeather] || {};
 
   const percentage = (totalWater / neededWater) * 100;
-  const leadingDigit = Math.floor(percentage).toString()[0];
+  const leadingDigit = Math.min(Math.floor(percentage).toString()[0], 10);
 
   const imageUrl = `https://quddaztestbucket.s3.ap-northeast-2.amazonaws.com/${leadingDigit}.png`;
 
