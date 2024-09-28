@@ -24,10 +24,12 @@ const DrinkRecord = () => {
 
   // 선택한 ml 값을 상태로 관리
   const [totalMl, setTotalMl] = useState(0);
+  const [activeItem, setActiveItem] = useState(null);
 
   // 버튼 클릭 시 ml 값을 추가하는 함수
   const handleMlSelect = (ml) => {
     setTotalMl((prevMl) => prevMl + ml); // 기존 값에 추가
+    setActiveItem(ml); // 현재 클릭한 ml 값을 activeItem으로 설정
   };
 
   const handleAddDrink = async () => {
@@ -105,7 +107,9 @@ const DrinkRecord = () => {
           {[30, 50, 100, 150].map((ml) => (
             <div
               key={ml}
-              className="drink-record-select-btn"
+              className={`drink-record-select-btn${
+                activeItem === ml ? " active" : ""
+              }`}
               onClick={() => handleMlSelect(ml)}
             >
               {ml}ML
@@ -116,7 +120,9 @@ const DrinkRecord = () => {
           {[200, 250, 300, 330].map((ml) => (
             <div
               key={ml}
-              className="drink-record-select-btn"
+              className={`drink-record-select-btn${
+                activeItem === ml ? " active" : ""
+              }`}
               onClick={() => handleMlSelect(ml)}
             >
               {ml}ML
@@ -127,7 +133,9 @@ const DrinkRecord = () => {
           {[400, 500, 600].map((ml) => (
             <div
               key={ml}
-              className="drink-record-select-btn"
+              className={`drink-record-select-btn${
+                activeItem === ml ? " active" : ""
+              }`}
               onClick={() => handleMlSelect(ml)}
             >
               {ml}ML
@@ -138,7 +146,9 @@ const DrinkRecord = () => {
           {[800, 1000].map((ml) => (
             <div
               key={ml}
-              className="drink-record-select-btn"
+              className={`drink-record-select-btn${
+                activeItem === ml ? " active" : ""
+              }`}
               onClick={() => handleMlSelect(ml)}
             >
               {ml}ML
