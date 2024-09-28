@@ -1,7 +1,12 @@
 import React from "react";
+import DrinkRecord from "./component/DrinkRecord";
 
 const Record = () => {
-  return <div>Record</div>;
+  return (
+    <div>
+      <DrinkRecord />
+    </div>
+  );
 };
 
 export default Record;
