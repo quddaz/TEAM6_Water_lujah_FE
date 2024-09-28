@@ -64,6 +64,7 @@ const DrinkRecord = () => {
       if (response.ok) {
         // 성공적으로 데이터 수신
         setResult(data.data);
+        localStorage.setItem(drinkName, data.data); // 음료 이름에 맞는 키로 로컬스토리지에 저장
         setError(""); // 오류 초기화
       } else {
         // 오류 처리
@@ -145,8 +146,7 @@ const DrinkRecord = () => {
           ))}
         </div>
       </div>
-      {result !== null && <div>계산된 물: {result}ml</div>}
-      {error && <div style={{ color: "red" }}>{error}</div>}
+
       <div
         className="drink-record-footer"
         onClick={totalMl >= 30 ? handleAddDrink : null}

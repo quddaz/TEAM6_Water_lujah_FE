@@ -1,0 +1,276 @@
+.stc-container {
+  //   display: flex;
+  background-color: #d4eced;
+  width: 100%;
+  height: 100vh;
+  .stc-header-container {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center; /* 추가: 중앙 정렬 */
+    align-items: center; /* 추가: 세로 중앙 정렬 */
+    width: 100%;
+    height: 40px; /* 높이를 설정 */
+    text-align: center;
+    font-size: 14px;
+
+    .stc-header {
+      display: flex;
+
+      width: 294px;
+      height: 40px; /* 부모 높이를 적절하게 설정 */
+      gap: 10px;
+      border-radius: 8px; /* 상하좌우 모두 8px로 설정 */
+      background: rgba(187, 187, 187, 0.2);
+      .stc-header-m {
+        padding-top: 10px;
+        color: white;
+        width: 147px;
+        height: 40px; /* 부모 높이를 적절하게 설정 */
+        gap: 10px;
+        border-radius: 8px; /* 상하좌우 모두 8px로 설정 */
+        background: var(--gray-10, #3c3c3c);
+      }
+      .stc-header-m-m {
+        padding-top: 10px;
+
+        width: 147px;
+        height: 40px; /* 부모 높이를 적절하게 설정 */
+        gap: 10px;
+        border-radius: 8px; /* 상하좌우 모두 8px로 설정 */
+        background: rgba(187, 187, 187, 0.2);
+      }
+
+      .stc-header-w {
+        padding-top: 10px;
+        width: 147px;
+        height: 40px; /* 부모 높이를 적절하게 설정 */
+        gap: 10px;
+        border-radius: 8px; /* 상하좌우 모두 8px로 설정 */
+        background: rgba(187, 187, 187, 0.2);
+      }
+      .stc-header-w-w {
+        padding-top: 10px;
+        width: 147px;
+        height: 40px; /* 부모 높이를 적절하게 설정 */
+        gap: 10px;
+        border-radius: 8px; /* 상하좌우 모두 8px로 설정 */
+        background: var(--gray-10, #3c3c3c);
+      }
+    }
+  }
+  .stc-main-container {
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .stc-main-water {
+      height: 350px;
+      align-self: stretch;
+      border-radius: 12px;
+      border: 1px solid var(--gray0, #d2d2d2);
+      background: var(--WhiteColor, #fff);
+      .sta-container {
+        .sta-main-water-title {
+          text-align: center;
+          padding-top: 11px;
+          padding-bottom: 11px;
+        }
+        .sta-line {
+          width: 100%;
+          height: 1px;
+          background: var(--gray0, #d2d2d2);
+        }
+      }
+      .sta-none {
+        margin-top: 27px;
+      }
+      .stc-main-water-sub-content {
+        padding-left: 11px;
+        padding-top: 14px;
+        .stc-main-water-sub-title {
+          color: var(--black, #121212);
+          font-size: 12px;
+          font-weight: 500;
+        }
+        .stc-main-water-sub-ml {
+          color: var(--black, #121212);
+          font-size: 22px;
+          font-weight: 600;
+        }
+        .stc-main-water-sub-comment {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+    .stc-main-show-graph-container {
+      margin-top: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: flex;
+      width: 100%;
+      .stc-main-show-graph-ml-container {
+        width: 100%;
+        .stc-main-show-graph-ml {
+          display: flex;
+          padding-bottom: 22px;
+          .stc-ml {
+            font-size: 12px;
+            font-weight: 500;
+            width: 50px;
+          }
+          .stc-grahp-line {
+            margin-top: 10px;
+            width: 100%;
+            height: 1px;
+            background: var(--gray0, #d2d2d2);
+          }
+        }
+      }
+    }
+    .stc-main-show-graph {
+      display: flex;
+      gap: 50px;
+      padding-left: 90px;
+      font-size: 13px;
+      font-weight: 500;
+      .stc-main-show-graph-time {
+        .vertical {
+          width: 14.861px;
+          height: 41.287px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #32dee7);
+          z-index: 10px;
+          position: absolute;
+          top: 39%;
+        }
+        .verticall {
+          width: 14.861px;
+          height: 71.215px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #32dee7);
+          z-index: 10px;
+          position: absolute;
+          top: 35.8%;
+        }
+        .verticalll {
+          width: 14.861px;
+          height: 119.479px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #32dee7);
+          z-index: 10px;
+          position: absolute;
+          top: 30.2%;
+        }
+        .verticallll {
+          width: 14.861px;
+          height: 41.287px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #32dee7);
+          z-index: 10px;
+          position: absolute;
+          top: 39%;
+        }
+      }
+    }
+    .stc-main-show-day {
+      display: flex;
+      gap: 35px;
+      padding-left: 70px;
+      font-size: 13px;
+      font-weight: 500;
+      .stc-main-show-days {
+        .vertical {
+          width: 14.861px;
+          height: 41.287px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #32dee7);
+          z-index: 10px;
+          position: absolute;
+          top: 36%;
+        }
+        .verticalll {
+          width: 14.861px;
+          height: 119.479px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #32dee7);
+          z-index: 10px;
+          position: absolute;
+          top: 27.2%;
+        }
+        .cvertical {
+          width: 14.861px;
+          height: 41.287px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--coffee, #6a0000);
+          z-index: 10px;
+          position: absolute;
+          top: 81.4%;
+        }
+        .cverticall {
+          width: 14.861px;
+          height: 83.897px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--coffee, #6a0000);
+          z-index: 10px;
+          position: absolute;
+          top: 76.5%;
+        }
+        .cverticalll {
+          width: 14.861px;
+          height: 80px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--coffee, #6a0000);
+          z-index: 10px;
+          position: absolute;
+          top: 77%;
+        }
+      }
+    }
+    .stc-main-cafe {
+      margin-top: 30px;
+      display: flex;
+      padding: 30px 14px;
+
+      border-radius: 12px;
+      border: 1px solid var(--gray0, #d2d2d2);
+      background: #fff;
+      .stc-main-cafe-title-container {
+        .stc-main-cafe-title {
+        }
+        .stc-main-cafe-mg {
+          font-size: 22px;
+
+          font-weight: 600;
+        }
+      }
+      .stc-main-cafe-content-container {
+        padding-top: 15px;
+        padding-left: 38px;
+        .stc-main-cafe-content {
+          font-size: 10px;
+
+          font-weight: 600;
+        }
+        .stc-main-cafe-sub-content {
+          font-size: 8px;
+
+          font-weight: 500;
+        }
+      }
+      .stc-show-icon {
+        padding-left: 12px;
+        padding-top: 15px;
+      }
+    }
+  }
+}

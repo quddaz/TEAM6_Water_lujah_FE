@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ReactComponent as ActiveUnion } from "../../assets/footer/ActiveUnion.svg";
 import { ReactComponent as CoffeeUnion } from "../../assets/footer/CoffeeUnion.svg";
 import { ReactComponent as SparkleUnion } from "../../assets/footer/SparkleUnion.svg";

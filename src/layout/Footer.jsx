@@ -45,7 +45,11 @@ const Footer = () => {
               navigate("/record");
             }}
           >
-            {path === "/record" ? <ActiveEdit /> : <Edit />}
+            {path === "/record" || path === "/drinkrecord" ? (
+              <ActiveEdit />
+            ) : (
+              <Edit />
+            )}
             세례기록
           </div>
 
@@ -58,7 +62,7 @@ const Footer = () => {
               navigate("/statistic");
             }}
           >
-            {path === "/statistic" ? <ActiveUp /> : <Up />}
+            {path === "/statistic" || path === "/week" ? <ActiveUp /> : <Up />}
             통계
           </div>
         </div>

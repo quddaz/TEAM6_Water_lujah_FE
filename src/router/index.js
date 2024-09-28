@@ -9,8 +9,9 @@ import communityRouter from "./communityRouter";
 const Main = lazy(() => import("../page/main"));
 
 const Record = lazy(() => import("../page/record"));
-const Community = lazy(() => import("../page/community"));
+
 const Statistic = lazy(() => import("../page/statistic"));
+const Week = lazy(() => import("../page/statistic/component/Week"));
 const DrinkRecord = lazy(() => import("../page/record/component/DrinkRecord"));
 
 const router = createBrowserRouter([
@@ -35,19 +36,20 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
-      {
-        path: "community",
-        element: (
-          <Suspense fallback={<Loading />}>
-            <Community />
-          </Suspense>
-        ),
-      },
+
       {
         path: "statistic",
         element: (
           <Suspense fallback={<Loading />}>
             <Statistic />
+          </Suspense>
+        ),
+      },
+      {
+        path: "week",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Week />
           </Suspense>
         ),
       },
