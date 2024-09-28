@@ -1,25 +1,25 @@
-import React from "react"
-import { Outlet, useLocation } from "react-router-dom"
-import Footer from "./Footer"
+import React from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import Footer from "./Footer";
 
 const Layout = () => {
-  const location = useLocation()
-  // const isMainPage = location.pathname === "/"
+  const location = useLocation();
 
-  // 유저정보 모달을 안띄우고 싶은 라우팅을 설정
-  // const noUserModalPaths = ["/login", "/info"]
+  // Footer를 표시하지 않을 경로를 지정 (여기서는 "/login1")
+  const hideFooterPaths = ["/login1", "/login2", "/login3", "/login4"];
 
-  // 현재 location이랑 같은지 확인
-  // const showModal = !noUserModalPaths.includes(location.pathname)
+  // 현재 경로가 hideFooterPaths에 포함되어 있는지 확인
+  const showFooter = !hideFooterPaths.includes(location.pathname);
 
   return (
     <>
       <div className="content-container">
         <Outlet />
       </div>
-      <Footer />
+      {/* showFooter가 true일 때만 Footer 렌더링 */}
+      {showFooter && <Footer />}
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

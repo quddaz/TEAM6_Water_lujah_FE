@@ -7,7 +7,10 @@ import mypageRouter from "./mypageRouter";
 import communityRouter from "./communityRouter";
 
 const Main = lazy(() => import("../page/main"));
-
+const Login1 = lazy(() => import("../page/login/Login1"));
+const Login2 = lazy(() => import("../page/login/Login2"));
+const Login3 = lazy(() => import("../page/login/Login3"));
+const Login4 = lazy(() => import("../page/login/Login4"));
 const Record = lazy(() => import("../page/record"));
 
 const Statistic = lazy(() => import("../page/statistic"));
@@ -20,11 +23,44 @@ const router = createBrowserRouter([
     children: [
       ...mypageRouter,
       ...communityRouter,
+
       {
         path: "",
         element: (
           <Suspense fallback={<Loading />}>
             <Main />
+          </Suspense>
+        ),
+      },
+      {
+        path: "login1",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Login1 />
+          </Suspense>
+        ),
+      },
+      {
+        path: "login2",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Login2 />
+          </Suspense>
+        ),
+      },
+      {
+        path: "login3",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Login3 />
+          </Suspense>
+        ),
+      },
+      {
+        path: "login4",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Login4 />
           </Suspense>
         ),
       },
