@@ -65,7 +65,7 @@ function Login4() {
       setError("네트워크 오류가 발생했습니다.");
       setResult(null);
     }
-    navigate("/", {
+    navigate("/main", {
       state: { gender, weight, isOld, selectedWeather },
     });
   };

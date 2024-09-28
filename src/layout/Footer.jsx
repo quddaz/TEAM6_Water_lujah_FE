@@ -32,10 +32,10 @@ const Footer = () => {
             }`}
             onClick={() => {
               setActiveItem("home");
-              navigate("/");
+              navigate("/main");
             }}
           >
-            {path === "/" ? <ActiveUnion /> : <Union />}
+            {path === "/main" ? <ActiveUnion /> : <Union />}
             물기도문
           </div>
           <div

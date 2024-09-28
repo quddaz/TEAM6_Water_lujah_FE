@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       ...communityRouter,
 
       {
-        path: "",
+        path: "/main",
         element: (
           <Suspense fallback={<Loading />}>
             <Main />
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "login1",
+        path: "",
         element: (
           <Suspense fallback={<Loading />}>
             <Login1 />
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "login2",
+        path: "login1",
         element: (
           <Suspense fallback={<Loading />}>
             <Login2 />
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "login3",
+        path: "login2",
         element: (
           <Suspense fallback={<Loading />}>
             <Login3 />
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "login4",
+        path: "login3",
         element: (
           <Suspense fallback={<Loading />}>
             <Login4 />
