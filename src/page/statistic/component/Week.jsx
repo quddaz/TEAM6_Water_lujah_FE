@@ -34,10 +34,69 @@ const Week = () => {
         />
       </div>
       <div className="stc-main-container">
-        <Graph
+        {/* <Graph
           title="주간 카페인 섭취량☕️"
           comment="카페인 섭취량이 증가했어요!"
-        />
+        /> */}
+        <div className="stc-main-water">
+          {/* 현재 경로가 /statistic인지 확인 */}
+
+          <div className="sta-none"></div>
+
+          <div className="stc-main-water-sub-content">
+            <div className="stc-main-water-sub-title">
+              주간 카페인 섭취량☕️
+            </div>
+
+            <div className="stc-main-water-sub-comment">
+              카페인 섭취량이 증가했어요!
+            </div>
+          </div>
+          <div className="stc-main-show-graph-container">
+            <div className="stc-main-show-graph-ml-container">
+              <div className="stc-main-show-graph-ml">
+                <div className="stc-ml">2L</div>
+                <div className="stc-grahp-line"></div>
+              </div>
+              <div className="stc-main-show-graph-ml">
+                <div className="stc-ml">1,500</div>
+                <div className="stc-grahp-line"></div>
+              </div>
+              <div className="stc-main-show-graph-ml">
+                <div className="stc-ml">1000</div>
+                <div className="stc-grahp-line"></div>
+              </div>
+              <div className="stc-main-show-graph-ml">
+                <div className="stc-ml">500</div>
+                <div className="stc-grahp-line"></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="stc-main-show-graphs">
+            <div className="stc-main-show-graph-time">
+              <div className="verticall"></div>월
+            </div>
+            <div className="stc-main-show-graph-time">
+              <div className="vertical"></div>화
+            </div>
+            <div className="stc-main-show-graph-time">
+              <div className="verticall"></div>수
+            </div>
+            <div className="stc-main-show-graph-time">
+              <div className="verticall"></div>묵
+            </div>
+            <div className="stc-main-show-graph-time">
+              <div className="vertical"></div>금
+            </div>
+            <div className="stc-main-show-graph-time">
+              <div className="verticall"></div>토
+            </div>
+            <div className="stc-main-show-graph-time">
+              <div className="verticall"></div>일
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

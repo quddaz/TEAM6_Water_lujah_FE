@@ -80,39 +80,41 @@ const Graph = ({ title, comment }) => {
             8시
           </div>
           <div className="stc-main-show-graph-time">
-            <div className="verticall"></div>12시
+            <div className="verticall"></div>
+            12시
           </div>
           <div className="stc-main-show-graph-time">
-            <div className="verticalll"></div>16시
+            <div className="verticall"></div>
+            16시
           </div>
           <div className="stc-main-show-graph-time">
-            <div className="verticallll"></div>20시
+            <div className="vertical"></div>
+            20시
           </div>
         </div>
       ) : (
-        <div className="stc-main-show-day">
-          <div className="stc-main-show-days">
-            <div className="vertical"></div>
-            <div className="cvertical"></div>토
+        <div className="stc-main-show-graphs">
+          <div className="stc-main-show-graph-time">
+            <div className="vertical"></div>월
           </div>
-          <div className="stc-main-show-days">
-            <div className="vertical"></div>
-            <div className="cvertical"></div>일
+          <div className="stc-main-show-graph-time">
+            <div className="verticall"></div>화
           </div>
-          <div className="stc-main-show-days">
-            <div className="vertical"></div>
-            <div className="cverticall"></div>월
+          <div className="stc-main-show-graph-time">
+            <div className="verticall"></div>수
           </div>
-          <div className="stc-main-show-days">
-            <div className="vertical"></div>
-            <div className="cvertical"></div>화
+          <div className="stc-main-show-graph-time">
+            <div className="vertical"></div>묵
           </div>
-          <div className="stc-main-show-days">
-            <div className="verticalll"></div>
-            <div className="cverticalll"></div>수
+          <div className="stc-main-show-graph-time">
+            <div className="vertical"></div>금
           </div>
-          <div className="stc-main-show-days">목</div>
-          <div className="stc-main-show-days">금</div>
+          <div className="stc-main-show-graph-time">
+            <div className="vertical"></div>토
+          </div>
+          <div className="stc-main-show-graph-time">
+            <div className="vertical"></div>일
+          </div>
         </div>
       )}
     </div>
