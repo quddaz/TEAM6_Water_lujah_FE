@@ -36,7 +36,7 @@ const Footer = () => {
             }}
           >
             {path === "/main" ? <ActiveUnion /> : <Union />}
-            물기도문
+            홈
           </div>
           <div
             className={`footer-item ${activeItem === "record" ? "active" : ""}`}
@@ -50,7 +50,7 @@ const Footer = () => {
             ) : (
               <Edit />
             )}
-            세례기록
+            수분기록
           </div>
 
           <div
