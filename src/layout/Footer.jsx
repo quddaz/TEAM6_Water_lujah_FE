@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { ReactComponent as Edit } from "../assets/footer/footeredit.svg";
+import { ReactComponent as ActiveEdit } from "../assets/footer/ActiveEdit.svg";
+import { ReactComponent as ActiveUp } from "../assets/footer/Activetrendingup.svg";
 import { ReactComponent as Up } from "../assets/footer/trendingup.svg";
 import { ReactComponent as Union } from "../assets/footer/Union.svg";
 import { ReactComponent as ActiveUnion } from "../assets/footer/ActiveUnion.svg";
@@ -37,28 +39,26 @@ const Footer = () => {
             물기도문
           </div>
           <div
-            className={`footer-item ${
-              activeItem === "achievement" ? "active" : ""
-            }`}
+            className={`footer-item ${activeItem === "record" ? "active" : ""}`}
             onClick={() => {
-              setActiveItem("achievement");
-              navigate("/achievement");
+              setActiveItem("record");
+              navigate("/record");
             }}
           >
-            <Edit />
+            {path === "/record" ? <ActiveEdit /> : <Edit />}
             세례기록
           </div>
 
           <div
             className={`footer-item footer-item-right ${
-              activeItem === "mypage" ? "active" : ""
+              activeItem === "statistic" ? "active" : ""
             }`}
             onClick={() => {
-              setActiveItem("mypage");
-              navigate("/mypage");
+              setActiveItem("statistic");
+              navigate("/statistic");
             }}
           >
-            <Up />
+            {path === "/statistic" ? <ActiveUp /> : <Up />}
             통계
           </div>
         </div>

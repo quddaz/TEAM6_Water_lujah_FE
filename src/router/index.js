@@ -8,9 +8,9 @@ import communityRouter from "./communityRouter";
 
 const Main = lazy(() => import("../page/main"));
 
-const Achievement = lazy(() => import("../page/achievement"));
+const Record = lazy(() => import("../page/record"));
 const Community = lazy(() => import("../page/community"));
-const Mypage = lazy(() => import("../page/mypage"));
+const Statistic = lazy(() => import("../page/statistic"));
 
 const router = createBrowserRouter([
   {
@@ -27,10 +27,10 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "achievement",
+        path: "record",
         element: (
           <Suspense fallback={<Loading />}>
-            <Achievement />
+            <Record />
           </Suspense>
         ),
       },
@@ -43,10 +43,10 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "mypage",
+        path: "statistic",
         element: (
           <Suspense fallback={<Loading />}>
-            <Mypage />
+            <Statistic />
           </Suspense>
         ),
       },
