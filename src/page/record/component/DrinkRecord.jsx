@@ -34,6 +34,7 @@ const DrinkRecord = () => {
 
   const handleAddDrink = async () => {
     // 요청할 데이터
+    navigate("/main");
     const payload = {
       drink: drinkName,
       total: totalMl,

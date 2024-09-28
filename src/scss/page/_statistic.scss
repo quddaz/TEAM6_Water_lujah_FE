@@ -67,6 +67,13 @@
           @include stc_font(14px, 600);
         }
       }
+      .b {
+        width: 13.833px;
+        height: 83.897px;
+        flex-shrink: 0;
+        border-radius: 4px 4px 0px 0px;
+        background: var(--MainColor, #32dee7);
+      }
     }
     .stc-main-show-graph-container {
       margin-top: 30px;
@@ -92,6 +99,36 @@
         }
       }
     }
+    .stc-main-show-graphs {
+      display: flex;
+      gap: 30px;
+      padding-left: 80px;
+      @include stc_font(13px, 500);
+      .stc-main-show-graph-time {
+        padding-right: 3px;
+        position: relative;
+        .vertical {
+          position: absolute;
+          bottom: calc(0px + 40px);
+          width: 14.861px;
+          height: 80px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #32dee7);
+          z-index: 10px;
+        }
+        .verticall {
+          position: absolute;
+          bottom: calc(0px + 40px);
+          width: 14.861px;
+          height: 50px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #32dee7);
+          z-index: 10px;
+        }
+      }
+    }
     .stc-main-show-graph {
       display: flex;
       gap: 50px;
@@ -99,41 +136,44 @@
       @include stc_font(13px, 500);
       .stc-main-show-graph-time {
         padding-right: 3px;
+        position: relative;
         .vertical {
-          @include stc_vertical(41.287px, 39%);
+          position: absolute;
+          bottom: calc(0px + 40px);
+          width: 14.861px;
+          height: 80px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #32dee7);
+          z-index: 10px;
         }
         .verticall {
-          @include stc_vertical(71.215px, 35.8%);
-        }
-        .verticalll {
-          @include stc_vertical(119.479px, 30.2%);
-        }
-        .verticallll {
-          @include stc_vertical(41.287px, 39%);
+          position: absolute;
+          bottom: calc(0px + 40px);
+          width: 14.861px;
+          height: 50px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #32dee7);
+          z-index: 10px;
         }
       }
     }
     .stc-main-show-day {
       display: flex;
       gap: 30px;
-      padding-left: 85px;
+      padding-left: 80px;
       @include stc_font(13px, 500);
       .stc-main-show-days {
-        padding-left: 5px;
-        .vertical {
-          @include stc_vertical(41.287px, 36%);
-        }
-        .verticalll {
-          @include stc_vertical(119.479px, 27.2%);
-        }
-        .cvertical {
-          @include stc_vertical(41.287px, 81.4%, #6a0000);
-        }
-        .cverticall {
-          @include stc_vertical(83.897px, 76.5%, #6a0000);
-        }
-        .cverticalll {
-          @include stc_vertical(80px, 77%, #6a0000);
+        .verticall {
+          position: absolute;
+          bottom: calc(0px + 40px);
+          width: 14.861px;
+          height: 50px;
+          flex-shrink: 0;
+          border-radius: 4px 4px 0px 0px;
+          background: var(--MainColor, #32dee7);
+          z-index: 10px;
         }
       }
     }

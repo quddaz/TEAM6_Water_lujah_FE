@@ -29,17 +29,17 @@
   font-weight: $w;
 }
 
-@mixin stc_vertical($h, $t, $c: #32dee7) {
-  //   margin-left: 3px;
-  width: 14.861px;
-  height: $h;
-  flex-shrink: 0;
-  border-radius: 4px 4px 0px 0px;
-  background: var(--MainColor, $c);
-  z-index: 10px;
-  position: absolute;
-  top: $t;
-}
+// @mixin stc_vertical($h, $c: #32dee7) {
+//   //   margin-left: 3px;
+//   width: 14.861px;
+//   height: $h;
+//   flex-shrink: 0;
+//   border-radius: 4px 4px 0px 0px;
+//   background: var(--MainColor, $c);
+//   z-index: 10px;
+//   //   position: absolute;
+//   //   top: $t;
+// }
 
 @mixin stc_font($s, $w) {
   font-size: $s;
