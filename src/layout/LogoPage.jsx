@@ -3,8 +3,10 @@ import Skyblue from "../assets/main/Skyblue.svg";
 import White from "../assets/main/White.svg";
 import Logo from "../assets/main/Logo.svg";
 import { useLocation, useNavigate } from "react-router-dom";
+
+import Ship from "../assets/main/Ship.svg";
+
 function LogoPage() {
-  const location = useLocation();
   const navigate = useNavigate();
 
   return (
@@ -19,12 +21,23 @@ function LogoPage() {
       </div>
       <div className="logo_background">
         <img
-          className="skyblue"
+          className="ship"
+          src={Ship}
+          alt=""
+          style={{ width: "150px", height: "120px" }}
+        />
+        <img
+          className="back_skyblue"
           src={Skyblue}
           alt=""
           style={{ width: "450px" }}
         />
-        <img className="white" src={White} alt="" style={{ width: "450px" }} />
+        <img
+          className="back_white"
+          src={White}
+          alt=""
+          style={{ width: "450px" }}
+        />
       </div>
     </div>
   );
