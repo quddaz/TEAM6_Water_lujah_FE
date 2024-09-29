@@ -77,16 +77,17 @@ function Index() {
       imgSrc: Sun,
     },
   };
-
+  let leadingDigit = 0;
   const currentWeatherData = weatherMapping[todayWeather] || {};
 
-  const percentage = (totalWater / neededWater) * 100;
-  let leadingDigit = Math.floor(percentage).toString();
-  if (parseInt(leadingDigit) > 10) {
-    leadingDigit = "10";
+  const percentage = Math.min((totalWater / neededWater) * 100, 100);
+
+  if (percentage === 100) {
+    leadingDigit = 10;
   } else {
-    leadingDigit = leadingDigit[0]; // 첫 번째 자리수를 유지
+    leadingDigit = Math.floor(percentage).toString()[0];
   }
+
   const imageUrl = `https://quddaztestbucket.s3.ap-northeast-2.amazonaws.com/${leadingDigit}.png`;
 
   return (
