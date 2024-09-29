@@ -77,8 +77,9 @@ function Index() {
       imgSrc: Sun,
     },
   };
-
+  let leadingDigit = 0;
   const currentWeatherData = weatherMapping[todayWeather] || {};
+
 
   const percentage = (totalWater / neededWater) * 100;
   let leadingDigit = Math.floor(percentage).toString();
