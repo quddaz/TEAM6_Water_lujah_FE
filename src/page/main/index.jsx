@@ -11,7 +11,7 @@ function Index() {
   // 대문자로 시작하도록 변경
   const [teaResult, setTeaResult] = useState(0);
   const [spaResult, setSpaResult] = useState(0);
-  const [juiceResult, setjuiceResult] = useState(0);
+  const [juiceResult, setJuiceResult] = useState(0); // setJuiceResult로 변경
   const [milkResult, setMilkResult] = useState(0);
   const [waterResult, setWaterResult] = useState(0);
   const [coffeeResult, setCoffeeResult] = useState(0); // coffeeResult 상태 추가
@@ -37,7 +37,7 @@ function Index() {
     setCoffeeResult(parseFloat(coffee)); // coffeeResult 상태 업데이트
     setTeaResult(parseFloat(tea));
     setSpaResult(parseFloat(spa));
-    setjuiceResult(parseFloat(juice));
+    setJuiceResult(parseFloat(juice)); // setJuiceResult로 수정
     setMilkResult(parseFloat(milk));
     setNeededWater(parseInt(needWater));
     setTodayWeather(weather);
@@ -77,12 +77,11 @@ function Index() {
       imgSrc: Sun,
     },
   };
-  let leadingDigit = 0;
+
   const currentWeatherData = weatherMapping[todayWeather] || {};
 
-
   const percentage = (totalWater / neededWater) * 100;
-  let leadingDigit = Math.floor(percentage).toString();
+  let leadingDigit = Math.floor(percentage).toString(); // 중복 선언 제거
 
   // 0부터 10까지의 값을 처리
   if (parseInt(leadingDigit) > 10) {
@@ -156,4 +155,4 @@ function Index() {
   );
 }
 
-export default Index; // 대문자로 시작하도록 변경
+export default Index;
